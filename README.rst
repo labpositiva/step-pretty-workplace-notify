@@ -127,23 +127,18 @@ Other commands for developing are written in Makefile:
 .. code-block:: bash
 
   λ make
-    \{^_^}/ Commands
+    ༼ つ ◕_◕ ༽つ Commands
       build                Build docker container by env
       clean                clean Files compiled
-      decrypt_vars         decrypt vars ansible by env
-      deploy               Deploy Application
       documentation        Make Documentation
       down                 remove containers docker by env
       environment          Make environment for developer
-      env                  Show envs available
-      encrypt_vars         encrypt vars
       install              Install with var env Dependences
       list                 List of current active services by env
       lint                 Clean files unnecesary
       test                 make test
       up                   Up application by env
       restart              Reload services
-      runserver            Runserver
       ssh                  Connect to container
       stop                 stop containers docker by env
       setup                Install dependences initial
