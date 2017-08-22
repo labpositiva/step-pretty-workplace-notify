@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # -*- coding: utf-8 -*-
 
-export PROJECT_NAME=worker-activemq
+export PROJECT_NAME=step-pretty-workplace-notify
 export PROJECT_NAME_DEV="${PROJECT_NAME}"-DEV
 export PROJECT_NAME_STAGE="${PROJECT_NAME}"-STAGE
 export PROJECT_NAME_TEST="${PROJECT_NAME}"-TEST

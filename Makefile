@@ -1,8 +1,8 @@
 .PHONY: build deploy lint test functions help
 .DEFAULT_GOAL := help
 
-DOCKER_NETWORK = worker-activemq_network
-PROYECT_NAME = worker-activemq
+DOCKER_NETWORK = step-pretty-workplace-notify_network
+PROYECT_NAME = step-pretty-workplace-notify
 
 # Configuration.
 SHELL = /bin/bash
