@@ -1,5 +1,7 @@
-Workplace Notify Step `Docker Repository on hub.docker`_
-=========================================================
+Workplace Notify Step
+#####################
+
+|Build Status| |GitHub issues| |GitHub license|
 
 Posts wercker build/deploy status to a `Workplace Groups`_
 
@@ -120,7 +122,7 @@ posts deploy notification
                 token: $WORKPLACE_TOKEN
 
 Others
-------
+******
 
 Other commands for developing are written in Makefile:
 
@@ -135,7 +137,7 @@ Other commands for developing are written in Makefile:
       environment          Make environment for developer
       install              Install with var env Dependences
       list                 List of current active services by env
-      lint                 Clean files unnecesary
+      lint                 Make Lint Files
       test                 make test
       up                   Up application by env
       restart              Reload services
@@ -143,6 +145,7 @@ Other commands for developing are written in Makefile:
       stop                 stop containers docker by env
       setup                Install dependences initial
       verify_network       Verify network
+      run                  Run script
       help                 Show help text
 
 Changelog
@@ -162,10 +165,17 @@ Made with :heart: :coffee:️and :pizza: by `company`_.
 
 ..  links:
 
-.. _`author`: https://github.com/luismayta
-.. _`changelog`: CHANGELOG.rst
-.. _`contributors`: AUTHORS
-.. _`contributing`: CONTRIBUTING.rst
+.. |Build Status| image:: https://travis-ci.org/labpositiva/step-pretty-workplace-notify.svg
+   :target: https://travis-ci.org/labpositiva/step-pretty-workplace-notify
+.. |GitHub issues| image:: https://img.shields.io/github/issues/labpositiva/step-pretty-workplace-notify.svg
+   :target: https://github.com/labpositiva/step-pretty-workplace-notify/issues
+.. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
+   :target: LICENSE
+
+.. _author: https://github.com/luismayta
+.. _changelog: CHANGELOG.rst
+.. _contributors: AUTHORS
+.. _contributing: CONTRIBUTING.rst
 .. _Docker Repository on hub.docker: https://hub.docker.com/
-.. _`company`: https://github.com/labpositiva
+.. _company: https://github.com/labpositiva
 .. _Workplace Groups: https://developers.facebook.com/docs/workplace/integrations/custom-integrations/reference/group
