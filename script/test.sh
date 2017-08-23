@@ -3,3 +3,7 @@
 
 # shellcheck source=/dev/null
 [ -r "script/bootstrap.sh" ] && source "script/bootstrap.sh"
+
+cd "${ROOT_DIR}" || echo "Not Found"
+
+green src
