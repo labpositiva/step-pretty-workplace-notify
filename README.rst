@@ -143,6 +143,7 @@ Other commands for developing are written in Makefile:
       stop                 stop containers docker by env
       setup                Install dependences initial
       verify_network       Verify network
+      run                  Run script
       help                 Show help text
 
 Changelog
