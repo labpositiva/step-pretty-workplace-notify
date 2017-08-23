@@ -163,6 +163,7 @@ Other commands for developing are written in Makefile:
       ssh                  Connect to container
       stop                 stop containers docker by env
       setup                Install dependences initial
+      step_run             Run script for step wercker
       verify_network       Verify network
       run                  Run script
       help                 Show help text
