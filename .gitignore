@@ -42,3 +42,5 @@ user-data
 
 .ruby-version
 ;
+__pycache__/
+*.pyc
