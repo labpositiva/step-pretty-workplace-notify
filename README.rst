@@ -59,6 +59,25 @@ Environment
    * - Key
      - Value
 
+Testing
+*******
+
+Build
+=====
+
+.. code-block:: bash
+
+  λ make build env=test
+
+
+Run
+===
+
+.. code-block:: bash
+
+  λ make run env=test command=make test
+
+
 How To Use
 **********
 
@@ -128,7 +147,7 @@ Other commands for developing are written in Makefile:
 
 .. code-block:: bash
 
-  λ make
+ λ make
     ༼ つ ◕_◕ ༽つ Commands
       build                Build docker container by env
       clean                clean Files compiled
