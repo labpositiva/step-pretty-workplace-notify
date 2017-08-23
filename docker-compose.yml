@@ -1,0 +1,19 @@
+# step-pretty-workplace-notify: Docker Compose
+# https://docs.docker.com/compose/
+#
+# Usage: docker-compose up
+version: '3'
+services:
+
+  app:
+    ports:
+      - "80:8000"
+    restart: always
+    image: python:3.6.1
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
+    volumes:
+      - .:/app
+    env_file:
+      - .env
