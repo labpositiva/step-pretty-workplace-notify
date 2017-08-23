@@ -6,26 +6,12 @@
 
 cd "${ROOT_DIR}" || echo 'Not Found'
 
-if [ ! -n "$WERCKER_TOKEN" ]; then
-  fail 'Please specify Token'
+if [ "$1" == "" ]; then
+    docker-compose up --remove-orphans
+elif [ "$1" == "dev" ]; then
+    docker-compose -f docker-compose.yml -f docker-compose/dev.yml -p "${PROJECT_NAME_DEV}" run --rm app "${2}"
+elif [ "$1" == "test" ]; then
+    docker-compose -f docker-compose.yml -f docker-compose/test.yml -p "${PROJECT_NAME_TEST}" run --rm app "${2}"
+elif [ "$1" == "prod" ]; then
+    docker-compose -f docker-compose.yml -f docker-compose/prod.yml -p "${PROJECT_NAME}" run --rm app "${2}"
 fi
-
-if [ ! -n "$WERCKER_GROUP" ]; then
-  fail 'Please specify Group'
-fi
-
-if [ "$WERCKER_WORKPLACE_NOTIFY_ON" = "failed" ]; then
-  if [ "$WERCKER_RESULT" = "passed" ]; then
-    echo "Skipping.."
-    return 0
-  fi
-fi
-
-if [ -n "$WERCKER_WORKPLACE_NOTIFY_BRANCH" ]; then
-  if [ "$WERCKER_GIT_BRANCH" != "$WERCKER_WORKPLACE_NOTIFY_BRANCH" ]; then
-    echo "Workplace notification not necessary on this branch. Skipping.."
-    return 0
-  fi
-fi
-
-python "${SOURCE_DIR}/run.py"
