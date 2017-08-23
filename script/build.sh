@@ -10,8 +10,6 @@ if [ "$1" == "" ]; then
 	docker-compose build --no-cache
 elif [ "$1" == "dev" ]; then
 	docker-compose -f docker-compose.yml -f docker-compose/dev.yml -p "${PROJECT_NAME_DEV}" build --no-cache
-elif [ "$1" == "stage" ]; then
-	docker-compose -f docker-compose.yml -f docker-compose/stage.yml -p "${PROJECT_NAME_STAGE}" build --no-cache
 elif [ "$1" == "test" ]; then
 	docker-compose -f docker-compose.yml -f docker-compose/test.yml -p "${PROJECT_NAME_TEST}" build --no-cache
 elif [ "$1" == "prod" ]; then
