@@ -72,7 +72,7 @@ Build
     build:
         after-steps:
             - labpositiva/pretty-workplace-notify:
-                group_id: $WORKPLACE_GROUP_ID
+                group: $WORKPLACE_GROUP
                 token: $WORKPLACE_TOKEN
 
 notify on specific branches only
@@ -82,7 +82,7 @@ notify on specific branches only
     build:
         after-steps:
             - labpositiva/pretty-workplace-notify:
-                group_id: $WORKPLACE_GROUP_ID
+                group: $WORKPLACE_GROUP
                 token: $WORKPLACE_TOKEN
                 branches: ^master$
 
@@ -93,7 +93,7 @@ notify on failed build only
     build:
         after-steps:
             - labpositiva/pretty-workplace-notify:
-                group_id: $WORKPLACE_GROUP_ID
+                group: $WORKPLACE_GROUP
                 token: $WORKPLACE_TOKEN
                 notify_on: "failed"
 
@@ -104,7 +104,7 @@ define additional message on passed build
     build:
         after-steps:
             - labpositiva/pretty-workplace-notify:
-                group_id: $WORKPLACE_GROUP_ID
+                group: $WORKPLACE_GROUP
                 token: $WORKPLACE_TOKEN
                 passed_message: yay :smile:
 
@@ -118,7 +118,7 @@ posts deploy notification
     deploy:
         after-steps:
             - labpositiva/pretty-workplace-notify:
-                group_id: $WORKPLACE_GROUP_ID
+                group: $WORKPLACE_GROUP
                 token: $WORKPLACE_TOKEN
 
 Others
