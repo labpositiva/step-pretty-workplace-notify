@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # -*- coding: utf-8 -*-
 
-make run
+make step_run
