@@ -9,7 +9,13 @@ properties:
   token:
     type: string
     required: true
+  community:
+    type: string
+    required: true
   group:
+    type: string
+    required: true
+  user:
     type: string
     required: true
   branches:
