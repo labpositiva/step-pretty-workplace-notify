@@ -9,7 +9,7 @@ properties:
   token:
     type: string
     required: true
-  group_id:
+  group:
     type: string
     required: true
   branches:
