@@ -1,0 +1,4 @@
+# step-pretty-workplace-notify: Docker Compose
+# https://docs.docker.com/compose/
+#
+# Usage: docker-compose prod up

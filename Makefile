@@ -23,6 +23,7 @@ LINT = $(shell) $(SCRIPT_DIR)/lint.sh
 TEST = $(shell) $(SCRIPT_DIR)/test.sh
 STOP =  $(shell) $(SCRIPT_DIR)/stop.sh
 SETUP =  $(shell) $(SCRIPT_DIR)/setup.sh
+STEP_RUN = $(shell) $(SCRIPT_DIR)/step_run.sh
 UP = $(shell) $(SCRIPT_DIR)/up.sh
 RUN = $(shell) $(SCRIPT_DIR)/run.sh
 
@@ -86,6 +87,10 @@ setup: ## Install dependences initial
 	make clean
 	$(SETUP)
 
+step_run: ## Run script for step wercker
+	make clean
+	$(STEP_RUN) && echo $(MESSAGE_HAPPY)
+
 verify_network: ## Verify network
 	@if [ -z $$(docker network ls | grep $(DOCKER_NETWORK) | awk '{print $$2}') ]; then\
 		(docker network create $(DOCKER_NETWORK));\
@@ -93,7 +98,7 @@ verify_network: ## Verify network
 
 run: ## Run script
 	make clean
-	$(RUN)
+	$(RUN) "${env}" "${command}" && echo $(MESSAGE_HAPPY)
 
 help: ## Show help text
 	@echo $(MESSAGE) "Commands"
