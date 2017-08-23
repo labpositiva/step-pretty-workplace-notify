@@ -24,6 +24,7 @@ TEST = $(shell) $(SCRIPT_DIR)/test.sh
 STOP =  $(shell) $(SCRIPT_DIR)/stop.sh
 SETUP =  $(shell) $(SCRIPT_DIR)/setup.sh
 UP = $(shell) $(SCRIPT_DIR)/up.sh
+RUN = $(shell) $(SCRIPT_DIR)/run.sh
 
 build:  ## Build docker container by env
 	make clean
@@ -89,6 +90,10 @@ verify_network: ## Verify network
 	@if [ -z $$(docker network ls | grep $(DOCKER_NETWORK) | awk '{print $$2}') ]; then\
 		(docker network create $(DOCKER_NETWORK));\
 	fi
+
+run: ## Run script
+	make clean
+	$(RUN)
 
 help: ## Show help text
 	@echo $(MESSAGE) "Commands"
