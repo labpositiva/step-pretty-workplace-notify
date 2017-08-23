@@ -1,5 +1,7 @@
 box: wercker/python
 build:
   steps:
+    - pip-install:
+        requirements_file: "requirements.txt"
     - validate-wercker-step
     - shellcheck
